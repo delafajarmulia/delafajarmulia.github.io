@@ -12,7 +12,7 @@ const Home = () => {
             <div className="text-blue-950 bg-white h-screen flex flex-cols justify-center items-center mx-auto gap-3 px-3 w-full md:w-3/4">
                 <div className="text-center lg:text-left">
                     <h1 className="text-4xl md:text-5xl font-bold">Dela Fajar Mulia</h1>
-                    <div className="flex flex-row justify-center lg:justify-start font-semibold text-lg lg:text-2xl my-2">
+                    <div className="flex flex-row justify-center lg:justify-start font-semibold text-lg md:text-2xl my-2">
                         <h2 className="">I'm a</h2>
                         <span className="pl-1.5">
                             <h2 className="text-yellow-400">

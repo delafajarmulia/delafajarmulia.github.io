@@ -1,6 +1,6 @@
 const Project = ({ image, name, desc, category, stacks, linkRepo, linkDeploy }) => {
     return(
-        <div className="w-72 min-h-72 rounded-lg border border-gray-400 p-3">
+        <div className="w-72 min-h-72 rounded-lg border border-gray-400 p-3 hover:border-gray-500 hover:shadow-lg">
             <img 
                 src={image} 
                 alt={image} 

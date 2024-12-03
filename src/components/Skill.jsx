@@ -1,6 +1,6 @@
 const Skill = ({logo, name}) => {
     return(
-        <div className="w-40 h-28 flex flex-col justify-center items-center rounded-lg border border-gray-400 hover:border-blue-950">
+        <div className="w-40 h-28 flex flex-col justify-center items-center rounded-lg border border-gray-400 hover:border-gray-500 hover:shadow-lg">
             <img 
                 src={logo} 
                 alt={`${logo} name`} 

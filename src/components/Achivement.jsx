@@ -1,6 +1,6 @@
 const Achivement = ({ image, name, organizer, category }) => {
     return(
-        <div className="w-72 min-h-80 rounded-lg border border-gray-400 p-3">
+        <div className="w-72 min-h-80 rounded-lg border border-gray-400 p-3 hover:border-gray-500 hover:shadow-lg">
             <img 
                 src={image} 
                 alt={image} 
