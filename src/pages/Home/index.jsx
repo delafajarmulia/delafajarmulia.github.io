@@ -1,5 +1,4 @@
 import React from "react"
-import rocket from '../../assets/rocket.png'
 import rocketHD from '../../assets/rocketHD.jpg'
 import { useNavigate } from "react-router"
 import Navbar from "../../components/Navbar"
