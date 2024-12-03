@@ -1,5 +1,4 @@
 import React from "react"
-import rocketHD from '../../assets/rocketHD.jpg'
 import { useNavigate } from "react-router"
 import Navbar from "../../components/Navbar"
 import TypingEffect from "../../components/TypingEffect"
@@ -35,7 +34,7 @@ const Home = () => {
                 </div>
                 <div className="hidden lg:block">
                     <img 
-                        src={rocketHD} 
+                        src="https://raw.githubusercontent.com/delafajarmulia/delafajarmulia.github.io/master/src/assets/rocketHD.jpg"
                         alt="rocket" 
                         loading="lazy"
                         width={800}

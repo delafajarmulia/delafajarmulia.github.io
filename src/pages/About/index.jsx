@@ -1,4 +1,4 @@
-import dela from "../../assets/dela.jpg"
+// import dela from "../../assets/dela.jpg"
 import Footer from "../../components/Footer"
 import Navbar from "../../components/Navbar"
 import Timeline from "../../components/Timeline"
@@ -14,7 +14,7 @@ const About = () => {
                     <div className="mt-5 grid grid-cols-1 lg:grid-cols-[1fr_2fr]">
                         <div className="flex justify-center">
                             <img 
-                                src={dela} 
+                                src="https://raw.githubusercontent.com/delafajarmulia/delafajarmulia.github.io/master/src/assets/dela.jpg"
                                 alt="dela" 
                                 loading="lazy"
                                 className="w-64 lg:w-72 h-64 lg:h-72 rounded-xl shadow-md lg:shadow-2xl"

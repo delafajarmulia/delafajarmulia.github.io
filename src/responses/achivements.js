@@ -1,4 +1,4 @@
-const baseURL = "/assets/achivements"
+const baseURL = "https://raw.githubusercontent.com/delafajarmulia/delafajarmulia.github.io/refs/heads/master/public/assets/achivements"
 
 const achivements = [
     {

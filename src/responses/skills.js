@@ -1,4 +1,4 @@
-const baseURL = "/assets/logos"
+const baseURL = "https://raw.githubusercontent.com/delafajarmulia/delafajarmulia.github.io/refs/heads/master/public/assets/logos"
 const skills = [
     {
         logo: `${baseURL}/html.svg`,

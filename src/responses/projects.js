@@ -1,5 +1,5 @@
-const baseURLTech = "/assets/logos"
-const baseURLProject = "/assets/projects"
+const baseURLTech = "https://raw.githubusercontent.com/delafajarmulia/delafajarmulia.github.io/refs/heads/master/public/assets/logos"
+const baseURLProject = "https://raw.githubusercontent.com/delafajarmulia/delafajarmulia.github.io/refs/heads/master/public/assets/projects"
 const githubURL = "https://github.com/delafajarmulia"
 
 const projects = [
