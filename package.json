@@ -2,13 +2,13 @@
   "name": "portfolio-v2",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://delafajarmulia.github.io/",
+  "homepage": "https://delafajarmulia.github.io",
   "description": "Portfolio website v2 by Dela Fajar Mulia",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
