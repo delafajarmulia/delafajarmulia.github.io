@@ -5,7 +5,10 @@ import './index.css'
 import Router from './routes/index.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <StrictMode>
     <Router />
-  </React.StrictMode>
+  </StrictMode>
+  // <React.StrictMode>
+  //   <Router />
+  // </React.StrictMode>
 )
