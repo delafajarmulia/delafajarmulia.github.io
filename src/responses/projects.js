@@ -4,6 +4,49 @@ const githubURL = "https://github.com/delafajarmulia"
 
 const projects = [
     {
+        image: `${baseURLProject}/portfolio.png`,
+        name: "Portfolio V2",
+        description: "Anime listing website built with Next.js and Jikan.moe API.",
+        category: "web",
+        stacks: [
+            `${baseURLTech}/javascript.svg`,
+            `${baseURLTech}/react.svg`,
+            `${baseURLTech}/tailwindcss.svg`,
+        ],
+        repo: `${githubURL}/delafajarmulia.github.io`,
+        link: "https://delafajarmulia.github.io"
+    },
+    {
+        image: `${baseURLProject}/ngequiz.png`,
+        name: "NgeQuiz",
+        description: "Anime listing website built with Next.js and Jikan.moe API.",
+        category: "web",
+        stacks: [
+            `${baseURLTech}/javascript.svg`,
+            `${baseURLTech}/react.svg`,
+            `${baseURLTech}/tailwindcss.svg`,
+            `${baseURLTech}/express.svg`,
+            `${baseURLTech}/prisma.svg`,
+            `${baseURLTech}/postgresql.svg`,
+            `${baseURLTech}/postman.svg`,
+        ],
+        repo: "",
+        link: "https://ngequiz.netlify.app"
+    },
+    {
+        image: `${baseURLProject}/suara-qita.png`,
+        name: "Suara Qita",
+        description: "Anime listing website built with Next.js and Jikan.moe API.",
+        category: "web",
+        stacks: [
+            `${baseURLTech}/laravel.svg`,
+            `${baseURLTech}/mysql.svg`,
+            `${baseURLTech}/tailwindcss.svg`,
+        ],
+        repo: `${githubURL}/suara-qita`,
+        link: ""
+    },
+    {
         image: `${baseURLProject}/animelist.png`,
         name: "DelAnimeList",
         description: "Anime listing website built with Next.js and Jikan.moe API.",
