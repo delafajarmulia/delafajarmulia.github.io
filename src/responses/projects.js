@@ -6,7 +6,7 @@ const projects = [
     {
         image: `${baseURLProject}/portfolio.png`,
         name: "Portfolio V2",
-        description: "Anime listing website built with Next.js and Jikan.moe API.",
+        description: "A thoughtfully designed personal portfolio website that presents my projects, skills, and journey as a developer.",
         category: "web",
         stacks: [
             `${baseURLTech}/javascript.svg`,
@@ -19,7 +19,7 @@ const projects = [
     {
         image: `${baseURLProject}/ngequiz.png`,
         name: "NgeQuiz",
-        description: "Anime listing website built with Next.js and Jikan.moe API.",
+        description: "A full-stack quiz web app for creating and playing quizzes with friends — includes scoring, sharing, and leaderboard features.",
         category: "web",
         stacks: [
             `${baseURLTech}/javascript.svg`,
@@ -36,7 +36,7 @@ const projects = [
     {
         image: `${baseURLProject}/suara-qita.png`,
         name: "Suara Qita",
-        description: "Anime listing website built with Next.js and Jikan.moe API.",
+        description: "A web-based system for managing and tracking tourism-related complaints from the public in a clear and structured way.",
         category: "web",
         stacks: [
             `${baseURLTech}/laravel.svg`,
@@ -49,7 +49,7 @@ const projects = [
     {
         image: `${baseURLProject}/animelist.png`,
         name: "DelAnimeList",
-        description: "Anime listing website built with Next.js and Jikan.moe API.",
+        description: "A responsive frontend web app for browsing popular anime and viewing detailed information, built to practice API integration and clean UI development.",
         category: "web",
         stacks: [
             `${baseURLTech}/javascript.svg`,
@@ -62,7 +62,7 @@ const projects = [
     {
         image: `${baseURLProject}/pinjem-asep.png`,
         name: "Pinjem Asep",
-        description: "An easy-to-use platform for efficient asset borrowing and lending.",
+        description: "A lightweight web app for requesting and managing asset loans with a user-friendly interface.",
         category: "web",
         stacks: [
             `${baseURLTech}/html.svg`,
@@ -87,7 +87,7 @@ const projects = [
     {
         image: `${baseURLProject}/bkk-system.png`,
         name: "BKK System",
-        description: "Job vacancy information system website built with PHP and MySQL.",
+        description: "A simple and structured platform for posting and exploring job opportunities through a user-friendly interface.",
         category: "web",
         stacks: [
             `${baseURLTech}/html.svg`,
@@ -101,7 +101,7 @@ const projects = [
     {
         image: `${baseURLProject}/yukpilih.png`,
         name: "Yuk Pilih",
-        description: "Voting API website built with C# and .NET for seamless interaction.",
+        description: "A web-based system that provides a smooth and secure way to submit, manage, and retrieve voting data through API interaction.",
         category: "api",
         stacks: [
             `${baseURLTech}/csharp.svg`,
@@ -114,7 +114,7 @@ const projects = [
     {
         image: `${baseURLProject}/yukpilih.png`,
         name: "Esemka Library",
-        description: "Library API website built with C# and .NET for seamless interaction.",
+        description: "A web-based system that enables easy access and management of library data through structured API endpoints.",
         category: "api",
         stacks: [
             `${baseURLTech}/csharp.svg`,
@@ -127,7 +127,7 @@ const projects = [
     {
         image: `${baseURLProject}/sayur-pop.png`,
         name: "Sayur Pop",
-        description: "Landing page for Sayur Pop, showcasing fresh vegetables and products.",
+        description: "A landing page designed to showcase fresh vegetables and highlight featured products through a clean and engaging layout.",
         category: "web",
         stacks: [
             `${baseURLTech}/html.svg`,
@@ -139,7 +139,7 @@ const projects = [
     {
         image: `${baseURLProject}/esemka-laundry.png`,
         name: "Esemka Laundry",
-        description: "Desktop app for Esemka Laundry built with C# and .NET for efficient laundry management.",
+        description: "A desktop application designed to simplify and manage daily laundry operations with a user-friendly interface.",
         category: "desktop",
         stacks: [
             `${baseURLTech}/csharp.svg`,
@@ -152,7 +152,7 @@ const projects = [
     {
         image: `${baseURLProject}/parking-system.png`,
         name: "Parking System",
-        description: "Desktop app for Parking System built with C# and .NET for efficient parking management.",
+        description: "A desktop application built to streamline vehicle entry, exit, and parking data management in an organized workflow.",
         category: "desktop",
         stacks: [
             `${baseURLTech}/csharp.svg`,
