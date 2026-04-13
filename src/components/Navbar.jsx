@@ -1,96 +1,90 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router"
 
+const navLinks = [
+    { to: "/", label: "Home" },
+    { to: "/about", label: "About" },
+    { to: "/skills", label: "Skills" },
+    { to: "/projects", label: "Projects" },
+    { to: "/achivements", label: "Achievements" },
+    { to: "/contact", label: "Contact" },
+]
+
 const Navbar = () => {
-    const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
     const location = useLocation()
 
-    const toggleMobileMenu = () => {
-        setIsMobileMenuVisible(!isMobileMenuVisible)
-    }
+    useEffect(() => {
+        const handleScroll = () => setScrolled(window.scrollY > 20)
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
 
-    return(
-        <nav className="w-full bg-white text-blue-950 font-medium fixed top-0 py-5">
-            {/* toogle untuk mobile menu */}
-            <div className="flex justify-end w-full px-5">
-                <button id="menuToggle" className="lg:hidden focus:outline-none" onClick={toggleMobileMenu}>
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
+    useEffect(() => {
+        setIsOpen(false)
+    }, [location.pathname])
+
+    return (
+        <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "glass-nav shadow-lg shadow-black/20" : "bg-transparent"}`}>
+            <div className="max-w-6xl mx-auto px-4 sm:px-6">
+                <div className="flex items-center justify-between h-16">
+                    {/* Logo */}
+                    <Link to="/" className="flex items-center gap-2">
+                        <span className="text-lg font-bold gradient-text">DFM</span>
+                        <span className="hidden sm:block text-sm text-slate-400 font-medium">Dela Fajar Mulia</span>
+                    </Link>
+
+                    {/* Desktop Nav */}
+                    <div className="hidden lg:flex items-center gap-1">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.to}
+                                to={link.to}
+                                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                                    location.pathname === link.to
+                                        ? "text-violet-300 bg-violet-500/10 border border-violet-500/20"
+                                        : "text-slate-400 hover:text-white hover:bg-white/5"
+                                }`}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+                    </div>
+
+                    {/* Mobile toggle */}
+                    <button
+                        className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-all"
+                        onClick={() => setIsOpen(!isOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        <div className="w-5 h-4 flex flex-col justify-between">
+                            <span className={`block h-0.5 bg-current rounded transition-all duration-300 ${isOpen ? "rotate-45 translate-y-1.5" : ""}`} />
+                            <span className={`block h-0.5 bg-current rounded transition-all duration-300 ${isOpen ? "opacity-0" : ""}`} />
+                            <span className={`block h-0.5 bg-current rounded transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+                        </div>
+                    </button>
+                </div>
+
+                {/* Mobile Menu */}
+                <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isOpen ? "max-h-80 pb-4" : "max-h-0"}`}>
+                    <div className="glass-card p-2 mt-2 flex flex-col gap-1">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.to}
+                                to={link.to}
+                                className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 ${
+                                    location.pathname === link.to
+                                        ? "text-violet-300 bg-violet-500/10 border border-violet-500/20"
+                                        : "text-slate-400 hover:text-white hover:bg-white/5"
+                                }`}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+                    </div>
+                </div>
             </div>
-
-            {/* for mobile */}
-            <div 
-                id="mobileMenu" 
-                className={`lg:hidden mt-2 flex flex-col w-full text-left pl-3 gap-2 ${isMobileMenuVisible ? "" : "hidden"}`}
-                >
-                    <Link
-                        className={`${location.pathname === "/" ? "text-yellow-400" : ""}`}
-                        to={"/"}>
-                            Home 🏡
-                    </Link>
-                    <Link
-                        className={`${location.pathname === "/about" ? "text-yellow-400" : ""}`}
-                        to={"/about"}>
-                            About 😎
-                    </Link>
-                    <Link
-                        className={`${location.pathname === "/skills" ? "text-yellow-400" : ""}`}
-                        to={"/skills"}>
-                            Skill 🎯
-                    </Link>
-                    <Link
-                        className={`${location.pathname === "/projects" ? "text-yellow-400" : ""}`}
-                        to={"/projects"}>
-                            Project 📂
-                    </Link>
-                    <Link
-                        className={`${location.pathname === "/achivements" ? "text-yellow-400" : ""}`}
-                        to={"/achivements"}>
-                            Achivement 🚀
-                    </Link>
-                    <Link
-                        className={`${location.pathname === "/contact" ? "text-yellow-400" : ""}`}
-                        to={"/contact"}>
-                            Contact 📲
-                    </Link>
-            </div>
-
-            {/* for desktop */}
-            <div id="desktopMenu" className="hidden lg:flex lg:justify-end lg:px-16">
-                <Link
-                    className={`pr-5 ${location.pathname === "/" ? "text-yellow-400" : ""}`}
-                    to={"/"}>
-                        Home 🏡
-                </Link>
-                <Link
-                    className={`pr-5 ${location.pathname === "/about" ? "text-yellow-400" : ""}`}
-                    to={"/about"}>
-                        About 😎
-                </Link>
-                <Link
-                    className={`pr-5 ${location.pathname === "/skills" ? "text-yellow-400" : ""}`}
-                    to={"/skills"}>
-                        Skill 🎯
-                </Link>
-                <Link
-                    className={`pr-5 ${location.pathname === "/projects" ? "text-yellow-400" : ""}`}
-                    to={"/projects"}>
-                        Project 📂
-                </Link>
-                <Link
-                    className={`pr-5 ${location.pathname === "/achivements" ? "text-yellow-400" : ""}`}
-                    to={"/achivements"}>
-                        Achivement 🚀
-                </Link>
-                <Link
-                    className={`pr-5 ${location.pathname === "/contact" ? "text-yellow-400" : ""}`}
-                    to={"/contact"}>
-                        Contact 📲
-                </Link>
-            </div>
-
         </nav>
     )
 }
